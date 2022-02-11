@@ -1,0 +1,10 @@
+{"records":[
+    {"id":1,"name":"Vanilla Latte","price":150,"date":20-01-2021,"quantity":2,"paymentme":"COD"},
+    {"id":2,"name":"Cocoa Cappuccino","price":150,"date":22-01-2021,"quantity":4,"paymentme":"ONLINE"},
+    {"id":3,"name":"White Chocolate Mocha","price":206,"date":18-01-2022,"quantity":7,"paymentme":"CARD"},
+    {"id":4,"name":"Kakori Kebab Wrap","price":250,"date":20-01-2022,"quantity":4,"paymentme":"ONLINE"},
+    {"id":5,"name":"Carrot Cake","price":220,"date":27-01-2022,"quantity":6,"paymentme":"COD"},
+    {"id":6,"name":"Iced Shaken Black Tea","price":219,"date":01-02-2022,"quantity":6,"paymentme":"ONLINE"},
+    {"id":7,"name":"Iced Shaken Green Tea","price":160,"date":02-02-2022,"quantity":3,"paymentme":"COD"},
+    {"id":8,"name":"Iced Americano","price":180,"date":13-02-2022,"quantity":1,"paymentme":"CARD"}
+]}
