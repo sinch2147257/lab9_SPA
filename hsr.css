@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .body {
+  font-family: "Montserrat", sans-serif;
+} */
+#layout {
+  display: flex;
+}
+
+.sidebar {
+  background: #6f4e37;
+  display: inline-block;
+  height: 100vh;
+  width: 20%;
+}
+
+.sidebar h2 {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sidebar button {
+  background: white;
+  color: #212529;
+  margin-left: 30%;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.links li {
+  list-style: none;
+  text-align: justify;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover,
+a:active {
+  color: #212529;
+}
+.sidebar button:hover,
+button:active {
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+}
+
+/* .row {
+    position:relative;
+    animation: mymove 5s ;
+    animation-timing-function: ease-in-out;
+}
+@keyframes mymove {
+    from {top: 0px;}
+    to {bottom: 200px;}
+  } */
+.container .new {
+  margin-top: 75px;
+  margin-left: 25px;
+}
+
+.container .btn {
+  margin: 10px;
+}
+.button-group {
+  margin: 10px;
+}
+.button-group .button-group-select {
+  padding: 10px;
+  display: inline-block;
+}
+.button-group-btn {
+  display: inline-block;
+}
+.btn.btn-dark.hide {
+  display: none;
+  visibility: hidden;
+}
+.btn.btn-dark.show {
+  display: inline-block;
+  visibility: visible;
+}
+
+.scrum-meeting {
+  visibility: hidden;
+  display: none;
+}
+.scrum-meeting.show {
+  visibility: visible;
+  display: block;
+}
+.sprint-meeting {
+  visibility: hidden;
+  display: none;
+}
+.sprint-meeting.show {
+  visibility: visible;
+  display: block;
+}
+
+@media screen and (max-width: 976px) {
+  .container .new {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 52%;
+  }
+
+  .links li {
+    margin-left: 0px;
+    padding-bottom: 10px;
+  }
+  .links a {
+    font-size: 1rem;
+  }
+  .container .new {
+    display: block;
+    margin-left: 0px;
+  }
+  .container .new2 {
+    margin-bottom: 25px;
+  }
+}
+
+
+
+

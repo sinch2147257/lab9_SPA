@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       
+
+
+
+
+
+<!-- font fontawesome -->
+<script src="https://kit.fontawesome.com/bc4d8abcd3.js" crossorigin="anonymous"></script>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- google fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+         <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+         <!-- bootstrap styles -->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+          
+        
+         
+           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+           <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>  
+
+
+           <style>
+            body {
+                padding: 0px;
+                margin: 0;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            
+            .container1 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+            }
+            
+            tr {
+                transition: all .2s ease-in;
+                cursor: pointer;
+            }
+            
+            th,
+            td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 2px solid #ddd;
+            }
+            
+            #header {
+                background-color: #25201c;
+                color: #fff;
+            }
+            
+            h3{
+                text-align: center;
+
+                color: rgb(7, 7, 7);
+                font-family:sans-serif;
+                padding: 6px 0px;
+            }
+            
+            tr:hover {
+                background-color: #f5f5f5;
+                transform: scale(1.02);
+                box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+            }
+            
+            @media only screen and (max-width: 768px) {
+                table {
+                    width: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <h3>{{message}}</h3> 
+              
+     
+  <section id='layout'>
+   
+    <section  >
+      
+      <div class="m-2">
+        <div class ="row">
+          <div class="container1"></div>
+          <div class="col">
+            <label for="rowsToBeDisplayed">Display</label>
+            <input type="number" class="form-control rounded w-50" step="1" min="0" max="10" ng-model="rowlimit" placeholder="number of meetings to display"/>
+          </div>
+          <div class="col">
+            <label for="searchMeeting">Search Meeting</label>
+            <input type="text" class="form-control rounded w-50"  ng-model="searchmenu" placeholder="search meeting id,title,date,created by "/>
+          </div>
+        </div>
+        </div>
+  
+        
+        <table  cellpadding="2" cellspacing="2" border="2" class="table table-striped table-dark table-hover table-sm">
+          <thead>
+          <tr>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by meeting id" aria-label="Search" aria-describedby="search-addon" ng-model="search.id"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by title" aria-label="Search" aria-describedby="search-addon" ng-model="search.name"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by date" aria-label="Search" aria-describedby="search-addon" ng-model="search.price"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by time" aria-label="Search" aria-describedby="search-addon" ng-model="search.available"/></th>
+            <th><input type="search" class="form-control rounded" placeholder = "Search by total attendees" aria-label="Search" aria-describedby="search-addon" ng-model="search.seller"/></th>
+            
+          </tr>
+            <tr>
+             <th scope="col" ng-click="orderMeetingBy('id')">Id</th>
+             <th scope="col" ng-click="orderMeetingBy('name')">Name</th>
+             <th scope="col" ng-click="orderMeetingBy('price')">Price</th>
+             <th scope="col" ng-click="orderMeetingBy('available')">Available</th>
+             <th scope="col" ng-click="orderMeetingBy('seller')">Seller</th>
+            </tr>
+  
+          </thead>
+          <tbody>
+            <tr ng-repeat="x in meetingsData | limitTo:rowlimit  |filter:search |filter:searchMeeting |orderBy :myOrderBy">
+                <td scope="row" data-label="Id">{{x.id}}</td>
+                <td data-label="Name">{{x.name | upperCase}}</td>
+                <td data-label="Price">{{x.price}}</td>
+                <td data-label="Available">{{x.available}}</td>
+                <td data-label="Seller">{{x.seller}}</td>
+               
+            </tr>
+          </tbody>
+  </table>
+</div>
+  
+  </section>
+    
+ <!-- <div class ='container animate__animated animate__zoomIn'>
+    <h1 style="text-align:center">{{Message}}</h1>
+   <button  class="btn btn-primary" onclick = 'ldUpMeetingXML()'>Show </button>
+ 
+   <button  class="btn btn-warning" onclick = "removeNodeElement()">Remove duration</button>
+   <button class="btn btn-secondary" onclick = "changeNodeValue()">Change Platform</button>
+   <button  class="btn btn-success" onclick = "addNewElement()">Show Other info</button>
+   
+   <table  id='upcomingMeeting_info' class = 'upcomingMeeting_table'>
+    </div>
+  </section> -->
+    
+    </body>
+    <!-- <script src="jsonFetch.js"></script> -->
+</html>
