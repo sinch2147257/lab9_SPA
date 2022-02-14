@@ -1,0 +1,68 @@
+{
+  "meetings": [
+    {
+      "id": 101,
+      "name": "Vanilla Latte",
+      "price": "160",
+      "available": "Yes",
+      "seller": "Best Seller"
+      
+    },
+    {
+      "id": 102,
+      "name": "Cocoa Cappuccino",
+      "price": "180",
+      "available": "yes",
+      "seller": "Best Seller"
+    },
+    {
+      "meeting_id": 103,
+      "name": "White Chocolate Mocha",
+      "price": "200",
+      "available": "NO",
+      "seller": "Average"
+    },
+    {
+      "meeting_id": 104,
+      "name": "Kakori Kebab Wrap",
+      "price": "300",
+      "available": "yes",
+      "seller": "Best"
+    },
+    {
+      "meeting_id": 105,
+      "title": "Emergency Meeting",
+      "price": "180",
+      "available": "yes",
+      "seller": "Best"
+    },
+    {
+      "meeting_id": 106,
+      "name": "Carrot Cake",
+      "price": "170",
+      "available": "no",
+     "seller": "Average"
+    },
+    {
+      "meeting_id": 107,
+      "name": "Iced Shaken Black Tea",
+      "price": "200",
+      "available": "yes",
+      "seller": "Best "
+    },
+    {
+      "meeting_id": 108,
+      "name": "Iced Shaken Green Tea",
+      "price": "190",
+      "available": "no",
+      "seller": "Average"
+    },
+    {
+      "meeting_id": 109,
+      "name": "Iced Americano",
+      "price": "180",
+      "available": "yes",
+      "seller": "Best"
+    }
+  ]
+}
