@@ -4,7 +4,7 @@
       "id": 101,
       "name": "Vanilla Latte",
       "date": "2022-02-10T14:45:00.000Z",
-      "Payment Status": "Successful"
+      "Payment_Status": "Successful"
       
       
     },
@@ -13,56 +13,56 @@
       "name": "Cocoa Cappuccino",
       "price": "180",
       "date": "2022-01-12T14:45:00.000Z",
-      "Payment Status": "Successful"
+      "Payment_Status": "Successful"
     },
     {
       "id": 103,
       "name": "White Chocolate Mocha",
       "price": "200",
       "date": "2022-01-14T14:45:00.000Z",
-     "Payment Status": "UN-Successful"
+     "Payment_Status": "UN-Successful"
     },
     {
       "id": 104,
       "name": "Kakori Kebab Wrap",
       "price": "300",
       "date": "2022-01-20T14:45:00.000Z",
-      "Payment Status": "UN-Successful"
+      "Payment_Status": "UN-Successful"
     },
     {
       "id": 105,
       "title": "Emergency Meeting",
       "price": "180",
       "date": "2022-02-14T14:45:00.000Z",
-      "Payment Status": "Successful"
+      "Payment_Status": "Successful"
     },
     {
       "id": 106,
       "name": "Carrot Cake",
       "price": "170",
       "date": "2022-01-14T14:45:00.000Z",
-    "Payment Status": "Successful"
+    "Payment_Status": "Successful"
     },
     {
       "id": 107,
       "name": "Iced Shaken Black Tea",
       "price": "200",
        "date": "2022-02-09T14:45:00.000Z",
-      "Payment Status": "UN-Successful"
+      "Payment_Status": "UN-Successful"
     },
     {
       "id": 108,
       "name": "Iced Shaken Green Tea",
       "price": "190",
       "date": "2022-02-07T14:45:00.000Z",
-      "Payment Status": "Successful"
+      "Payment_Status": "Successful"
     },
     {
       "id": 109,
       "name": "Iced Americano",
       "price": "180",
        "date": "2022-02-02T14:45:00.000Z",
-     "Payment Status": "Successful"
+     "Payment_Status": "Successful"
     }
   ]
 }
